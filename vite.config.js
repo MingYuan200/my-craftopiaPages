@@ -4,7 +4,7 @@ import svgr from "vite-plugin-svgr";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base:process.env.NODE_ENV === 'production' ? '/my-craftopiaPages/' :'/',
+  base: process.env.NODE_ENV === 'production' ? '/my-craftopiaPages/' : '/',
   // base:'./',
   plugins: [react(), svgr({
     // svgr options: https://react-svgr.com/docs/options/
