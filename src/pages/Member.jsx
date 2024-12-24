@@ -15,8 +15,8 @@ export default function Member() {
 
                 {/* 泡泡區 */}
                 <div className="bg-blob">
-                    <img className='infoBlob1' src="./images/blob-3.svg" alt="" />
-                    <img className='infoBlob2' src="./images/blob-4.svg" alt="" />
+                    <img className='infoBlob1' src="/images/blob-3.svg" alt="" />
+                    <img className='infoBlob2' src="images/blob-4.svg" alt="" />
                     <img className='infoBlob3' src="./images/blob-5.svg" alt="" />
 
 
