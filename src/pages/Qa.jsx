@@ -94,7 +94,7 @@ export default function Qa() {
                     {/* 麵包穴 */}
                     <div className="bread">
                         <a href="#">首頁</a>
-                        <img src="images/icon-tag/type=arrowRight_bold.svg" alt="" />
+                        <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
                         <a href="/qa">常見問題</a>
                     </div>
 
@@ -138,7 +138,7 @@ export default function Qa() {
                         <div id="QA-right">
                             <section id='qaPart1' ref={refPart1} data-aos='fade-up' data-aos-duration='800'>
                                 <h2 className="title">
-                                    <img src="./images/title/會員相關.svg" alt="" />
+                                    <img src="./images/title/qaTitle-1.svg" alt="" />
                                 </h2>
                                 <ul className="list">
                                     <ShowQa data={qaData.member}/>
@@ -147,7 +147,7 @@ export default function Qa() {
 
                             <section id='qaPart2' ref={refPart2} data-aos='fade-up' data-aos-duration='800'>
                                 <h2 className="title">
-                                    <img src="./images/title/課程相關.svg" alt="" />
+                                    <img src="./images/title/qaTitle-2.svg" alt="" />
                                 </h2>
                                 <ul className="list">
                                     <ShowQa data={qaData.class}/>
@@ -156,7 +156,7 @@ export default function Qa() {
 
                             <section id='qaPart3' ref={refPart3} data-aos='fade-up' data-aos-duration='800'>
                                 <h2 className="title">
-                                    <img src="./images/title/預約相關.svg" alt="" />
+                                    <img src="./images/title/qaTitle-3.svg" alt="" />
                                 </h2>
                                 <ul className="list">
                                     <ShowQa data={qaData.reserve}/>

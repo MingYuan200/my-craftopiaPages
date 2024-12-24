@@ -61,7 +61,7 @@ export default function MemeberInfo() {
         <div className="info">
             <div className="title">
                 <h2>
-                    <img src="./images/title/基本資料.svg" alt="基本資料" />
+                    <img src="./images/title/infoTitle.svg" alt="基本資料" />
                 </h2>
                 <img
                     className="icon-edit"

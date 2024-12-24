@@ -74,7 +74,7 @@ export default function Member() {
                 <section id="reserve">
                     <div className="title">
                         <h2>
-                            <img src="./images/title/預約紀錄.svg" alt="" />
+                            <img src="./images/title/reserveTitle.svg" alt="" />
                         </h2>
                     </div>
                     {/* 列表區 */}
@@ -91,7 +91,7 @@ export default function Member() {
                 {/* 收藏區 */}
                 <section id="like">
                     <div className="title">
-                        <h2><img src="./images/title/收藏紀錄.svg" alt="" /></h2>
+                        <h2><img src="./images/title/likeTitle.svg" alt="" /></h2>
                     </div>
                     {/* 卡片區 */}
                     <div className="card-area">
@@ -177,7 +177,7 @@ export default function Member() {
                 <section id="experience">
                     <div className="expWrapper">
                         <div className="expTitle">
-                            <img className='expHeader' src="./images/title/我的心得分享.svg" alt="" />
+                            <img className='expHeader' src="./images/title/myShare.svg" alt="" />
                             <div className="btn-area">
 
                                 <SeeMore text={'See All'} imgBall={"./images/seeAll-dot.svg"} href={"/member"} />

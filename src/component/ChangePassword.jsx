@@ -22,7 +22,7 @@ export default function ChangePassword() {
             {/* 標題 */}
             <div className="title">
                 <h2>
-                    <img src="./images/title/修改密碼.svg" alt="修改密碼" />
+                    <img src="./images/title/passTitle.svg" alt="修改密碼" />
                 </h2>
                 <button
                     className={`memberBtn ${isPasswordFormVisible ? "change-password" : ""}`}
