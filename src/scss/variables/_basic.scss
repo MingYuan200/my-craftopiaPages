@@ -1,0 +1,120 @@
+// 字重
+$font-weight-regular:400;
+$font-weight-medium:500;
+$font-weight-bold:700;
+
+// 動畫
+
+// qa左邊icon
+@mixin aniShake {
+    animation: shake .8s;
+    animation-iteration-count: infinite;
+
+    @keyframes shake {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(-25deg);
+        }
+
+        50% {
+            transform: rotate(0deg);
+        }
+
+        75% {
+            transform: rotate(25deg);
+        }
+
+    }
+}
+
+// 會員編輯按鈕
+@mixin aniPen {
+    animation: pen .8s;
+
+
+    @keyframes pen {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(15deg);
+        }
+
+    }
+}
+
+// 泡泡-上下漂浮
+@mixin aniFloat {
+    animation: float 4s ease-in-out infinite;
+
+
+    @keyframes float {
+        0% {
+            transform: translatey(0px);
+        }
+
+        50% {
+            transform: translatey(-20px);
+        }
+
+        100% {
+            transform: translatey(0px);
+        }
+    }
+
+}
+
+// 泡泡-上下漂浮+旋轉
+@mixin aniFloatRotate($rotate-angle) {
+    animation: floatRotate-#{$rotate-angle} 10s ease-in-out infinite;
+
+    @keyframes floatRotate-#{$rotate-angle} {
+        0% {
+            transform: translateX(0px) rotate(0deg);
+        }
+
+        50% {
+            transform: translateX(-60px) rotate(#{$rotate-angle});
+        }
+
+        100% {
+            transform: translateX(0px) rotate(0deg);
+        }
+    }
+}
+
+// 會員-預約紀錄
+@mixin aniBounce {
+    animation: bounce .8s;
+
+
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-15px);
+        }
+
+        60% {
+            transform: translateY(-5px);
+        }
+    }
+
+}
+
+//RWD斷點
+$mediaSm:'max-width:640px';
+$mediaSmUp:'min-width:641px'; //非手機版時的樣式(手機版和桌機版完全不同樣式的時候使用)
+$mediaMd:'max-width:1023px';
+$mediaLg:'min-width:1024px';
