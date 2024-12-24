@@ -38,7 +38,7 @@ export default function Member() {
                                         <img src={BASE_URL + "images/avatar/24-02.jpg"} alt="" />
                                     </div>
                                     <div className="camera">
-                                        <img src={BASE_URL + "icon-tag/type=camera.svg"} alt="" />
+                                        <img src={BASE_URL + "images/icon-tag/type=camera.svg"} alt="" />
                                     </div>
                                 </div>
 
