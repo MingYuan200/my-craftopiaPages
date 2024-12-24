@@ -94,7 +94,7 @@ export default function Qa() {
                     {/* 麵包穴 */}
                     <div className="bread">
                         <a href="#">首頁</a>
-                        <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
+                        <img src="images/icon-tag/type=arrowRight_bold.svg" alt="" />
                         <a href="/qa">常見問題</a>
                     </div>
 
