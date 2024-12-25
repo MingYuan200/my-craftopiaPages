@@ -9,6 +9,7 @@ body {
     font-weight: 500;
     letter-spacing: 2px;
     background-image: url(./images/BG-texture-400.jpg);
+    overflow-x: hidden;
 }
 
 
@@ -35,8 +36,90 @@ body {
     }
 }
 
+
+
+/* 裝飾區 */
+.qaDecoBox {
+    position: relative;
+    overflow: visible;
+
+    .qaDeco-1 {
+        position: absolute;
+        width: 168px;
+        left: -1%;
+        top: 10%;
+        @include aniFloat;
+        // @include aniFloatRotate(10deg);
+
+    }
+
+    .qaDeco-2 {
+        position: absolute;
+        width: 280px;
+        right: -6%;
+        top: 40%;
+        @include aniFloat;
+    }
+
+    .qaBlob {
+        position: absolute;
+        z-index: -2;
+    }
+
+    .qaLeftYellow {
+        left: -160px;
+        top: 15%;
+        width: 480px;
+        height: fit-content;
+        @include aniFloat;
+    }
+
+    .qaRightBrown {
+        fill: $color-coffee-primary;
+        opacity: 0.6;
+        right: -8%;
+        bottom: -24px;
+        width: 480px;
+        height: fit-content;
+        @include aniFloat;
+    }
+
+    .qaRightYellow {
+        fill: $color-gold-primary;
+        opacity: 0.8;
+        right: 10%;
+        bottom: -10px;
+        width: 300px;
+        height: fit-content;
+        transform: rotate(-60deg);
+    }
+
+}
+/* 裝飾-平板區 */
+@media ($mediaMd) {
+    .qaDecoBox{
+
+        .qaDeco-1{
+            width: 120px;
+        }
+        .qaDeco-2{
+            width: 160px;
+        }
+        .qaLeftYellow{
+            width: 300px;
+        }
+        .qaRightBrown{
+            width: 280px;
+        }
+        .qaRightYellow{
+            width: 200px;
+        }
+    }
+}
+
+
 /* 麵包穴 */
-.bread {
+.qa-bread {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -93,6 +176,7 @@ body {
             display: flex;
             flex-direction: column;
             width: 200px;
+
 
             .QaLeftSticky {
                 position: sticky;
@@ -306,10 +390,15 @@ body {
 
 /* 平板 */
 @media ($mediaMd) {
+    .qaDecoBox{
+        overflow: hidden;
+    }
     #qa-content .qa-contentBox {
         flex-direction: column;
+
         #QA-left {
             width: 100%;
+
             .QaLeftSticky {
                 display: flex;
                 justify-content: space-between;
@@ -321,20 +410,27 @@ body {
 
 /* 手機 */
 @media ($mediaSm) {
+    
     #qa-content .qa-contentBox {
         flex-direction: column;
         width: 86%;
+
         #QA-left {
             width: 100%;
+
             .QaLeftSticky {
                 flex-direction: column;
-                li{
+                align-items: center;
+
+                li {
                     margin-bottom: 16px;
                 }
             }
         }
     }
-    #qa-content .qa-contentBox #QA-right .list-row, #qa-content .qa-contentBox #QA-right .list-row.light{
+
+    #qa-content .qa-contentBox #QA-right .list-row,
+    #qa-content .qa-contentBox #QA-right .list-row.light {
         gap: 16px;
     }
 }

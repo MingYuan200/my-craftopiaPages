@@ -4,6 +4,8 @@ import '../scss/qa.scss'
 import Blob from "../assets/blob.svg";
 import Blob2 from "../assets/blob2.svg";
 import Blob3 from "../assets/blob3.svg";
+import Blob4 from "../assets/qaDeco.svg";
+import Blob5 from "../assets/blob5.svg";
 
 
 
@@ -66,7 +68,7 @@ export default function Qa() {
             },
         ],
     };
-    
+
 
     // 一開始就要先渲染sctive1 所以要先在useState給值
     const [activeId, setActiveId] = useState('qaPart1');
@@ -89,10 +91,19 @@ export default function Qa() {
             </section>
 
 
-            <main>
+            <main className='qaDecoBox'>
+
+                {/* 泡泡區 */}
+                <img className='qaDeco-1' src="./images/bgDecoItem-1.svg" alt="" />
+                <img className='qaDeco-2' src="./images/bgDecoItem-3.svg" alt="" />
+                <Blob4 className="qaBlob qaLeftYellow" />
+                <Blob5 className="qaBlob qaRightBrown" />
+                <Blob5 className="qaBlob qaRightYellow" />
+
+
                 <div id="qa-content">
                     {/* 麵包穴 */}
-                    <div className="bread">
+                    <div className="qa-bread">
                         <a href="#">首頁</a>
                         <img src="./images/icon-tag/type=arrowRight_bold.svg" alt="" />
                         <a href="/qa">常見問題</a>
@@ -102,8 +113,8 @@ export default function Qa() {
                         <ul id="QA-left">
                             <div className="QaLeftSticky">
                                 <li>
-                                    <a className="left-list" href="#" 
-                                    onClick={(e) => {
+                                    <a className="left-list" href="#"
+                                        onClick={(e) => {
                                             e.preventDefault(); // 阻止預設行為
                                             handleClick('qaPart1', refPart1);
                                         }}>
@@ -112,21 +123,21 @@ export default function Qa() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="left-list" href="#" 
-                                    onClick={(e) => {
-                                        e.preventDefault(); // 阻止預設行為
-                                        handleClick('qaPart2', refPart2);
-                                    }}>
+                                    <a className="left-list" href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault(); // 阻止預設行為
+                                            handleClick('qaPart2', refPart2);
+                                        }}>
                                         <Blob2 className={`leftIcon ${activeId === 'qaPart2' ? 'active' : ''}`}></Blob2>
                                         課程相關
                                     </a>
                                 </li>
                                 <li>
-                                    <a className="left-list" href="#" 
-                                    onClick={(e) => {
-                                        e.preventDefault(); // 阻止預設行為
-                                        handleClick('qaPart3', refPart3);
-                                    }}>
+                                    <a className="left-list" href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault(); // 阻止預設行為
+                                            handleClick('qaPart3', refPart3);
+                                        }}>
                                         <Blob3 className={`leftIcon ${activeId === 'qaPart3' ? 'active' : ''}`}></Blob3>
                                         預約相關
                                     </a>
@@ -141,7 +152,7 @@ export default function Qa() {
                                     <img src="./images/title/qaTitle-1.svg" alt="" />
                                 </h2>
                                 <ul className="list">
-                                    <ShowQa data={qaData.member}/>
+                                    <ShowQa data={qaData.member} />
                                 </ul>
                             </section>
 
@@ -150,7 +161,7 @@ export default function Qa() {
                                     <img src="./images/title/qaTitle-2.svg" alt="" />
                                 </h2>
                                 <ul className="list">
-                                    <ShowQa data={qaData.class}/>
+                                    <ShowQa data={qaData.class} />
                                 </ul>
                             </section>
 
@@ -159,7 +170,7 @@ export default function Qa() {
                                     <img src="./images/title/qaTitle-3.svg" alt="" />
                                 </h2>
                                 <ul className="list">
-                                    <ShowQa data={qaData.reserve}/>
+                                    <ShowQa data={qaData.reserve} />
                                 </ul>
                             </section>
 
