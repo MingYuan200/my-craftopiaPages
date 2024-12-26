@@ -1080,6 +1080,36 @@ body {
     }
 }
 
+/* totop按鈕 */
+.toTop{
+    z-index: 30;
+    // position: fixed;
+    // right: 10px;
+    // bottom:50px;
+
+    .toTop-btn{
+        border: none;
+        background: none;
+        cursor: pointer;
+
+        #toTopHover{
+            display: none;
+        }
+
+        &:hover{
+            >#toTop {
+                display: none;
+                /* transition: all ease-out 4s;  */
+                /* 如果要有特效，要改用transform或是js控制 */
+            }
+            #toTopHover {
+                display: block;
+                /* transition: all ease-in 4s; */
+            }
+        }
+    }
+}
+
 /* 頁尾區 */
 footer {
     background-color: #483D3F;

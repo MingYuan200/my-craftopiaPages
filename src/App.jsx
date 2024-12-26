@@ -24,7 +24,7 @@ function App() {
         <Route path='/member' element={<Member />}></Route>
         <Route path='/qa' element={<Qa />}></Route>
       </Routes>
-  
+
 
     </div>
   )

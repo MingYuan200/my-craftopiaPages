@@ -6,6 +6,7 @@ import Blob5 from "../assets/blob5.svg";
 import ReserveCardsBox from '../component/ReserveCardsBox';
 import SeeMore from '../component/SeeMore';
 import MyShareBox from '../component/MyShareBox';
+import ToTop from '../component/ToTop';
 
 export default function Member() {
     const BASE_URL = import.meta.env.BASE_URL;
@@ -199,8 +200,12 @@ export default function Member() {
 
             </main>
 
+            {/* TO TOp */}
+            <ToTop />
+
             {/* 頁尾區 */}
             <footer>
+
                 <div className="footer-bgDeco">
                     <img src="./images/footer-deco.png" alt="" />
                 </div>
