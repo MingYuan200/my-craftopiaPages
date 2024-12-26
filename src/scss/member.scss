@@ -436,12 +436,12 @@ body {
                     }
                 }
 
-                    #password {
-                        .title {
-                            flex-direction: column;
-                            align-items: flex-start;
-                        }
+                #password {
+                    .title {
+                        flex-direction: column;
+                        align-items: flex-start;
                     }
+                }
             }
         }
     }
@@ -1081,30 +1081,28 @@ body {
 }
 
 /* totop按鈕 */
-.toTop{
+.toTop {
     z-index: 30;
     // position: fixed;
     // right: 10px;
     // bottom:50px;
 
-    .toTop-btn{
+    .toTop-btn {
         border: none;
         background: none;
         cursor: pointer;
 
-        #toTopHover{
+        #toTopHover {
             display: none;
         }
 
-        &:hover{
+        &:hover {
             >#toTop {
                 display: none;
-                /* transition: all ease-out 4s;  */
-                /* 如果要有特效，要改用transform或是js控制 */
             }
+
             #toTopHover {
                 display: block;
-                /* transition: all ease-in 4s; */
             }
         }
     }
@@ -1136,7 +1134,7 @@ footer {
         padding: 2% 5%;
         width: 100%;
 
-        
+
 
         img {
             width: 338px;
