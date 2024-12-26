@@ -1087,6 +1087,7 @@ footer {
     flex-direction: column;
     align-items: center;
 
+
     .footer-bgDeco {
         position: relative;
         width: 100%;
@@ -1102,9 +1103,10 @@ footer {
     .foot-content {
         display: flex;
         justify-content: space-between;
-
+        padding: 2% 5%;
         width: 100%;
-        padding: 50px 100px;
+
+        
 
         img {
             width: 338px;
