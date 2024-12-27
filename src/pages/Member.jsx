@@ -10,6 +10,13 @@ import ToTop from '../component/ToTop';
 
 export default function Member() {
     const BASE_URL = import.meta.env.BASE_URL;
+
+    const initialStyle = {
+        position: "fixed",
+        bottom: "20px",
+        right: "10px",
+    };
+    
     return (
         <>
             <main id='memberArea'>
@@ -201,7 +208,7 @@ export default function Member() {
             </main>
 
             {/* TO TOp */}
-            <ToTop />
+            <ToTop initialStyle={initialStyle} />
 
             {/* 頁尾區 */}
             <footer>

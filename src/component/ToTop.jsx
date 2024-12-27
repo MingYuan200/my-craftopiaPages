@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-export default function ToTop() {
+export default function ToTop({initialStyle}) {
     const [isVisible, setIsVisible] = useState(false);
     //原始按鈕位置
-    const [buttonStyle, setButtonStyle] = useState({
-        position: "fixed",
-        bottom: "20px",
-        right: "10px",
-    });
+    const [buttonStyle, setButtonStyle] = useState(initialStyle);
 
 
     const handleScroll = () => {
@@ -21,17 +17,12 @@ export default function ToTop() {
         if (scrollY + viewportHeight > footerTop) {
             // 當滾動位置接近 footer 時，調整按鈕位置
             setButtonStyle({
-                position: "fixed",
+                ...initialStyle,
                 bottom: `${viewportHeight + scrollY - footerTop + 96}px`,
-                right: "10px",
             });
         } else {
-            // 恢復固定位置
-            setButtonStyle({
-                position: "fixed",
-                bottom: "20px",
-                right: "10px",
-            });
+            // 恢復原始樣式
+            setButtonStyle(initialStyle);
         }
     };
 
