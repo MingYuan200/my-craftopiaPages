@@ -1,0 +1,16 @@
+
+%line-multiple {
+    // 多行省略
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    // word-break: break-all;
+    // -webkit-line-clamp: 5;依照段落設定就不寫在這
+}
+%line-line {
+    // 單行省略
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -7,16 +7,20 @@ import ReserveCardsBox from '../component/ReserveCardsBox';
 import SeeMore from '../component/SeeMore';
 import MyShareBox from '../component/MyShareBox';
 import ToTop from '../component/ToTop';
+import ClassCardLatest from '../component/ClassCardLatest';
 
 export default function Member() {
     const BASE_URL = import.meta.env.BASE_URL;
 
+    //至頂按鈕樣式
     const initialStyle = {
         position: "fixed",
         bottom: "20px",
         right: "10px",
     };
-    
+
+   
+
     return (
         <>
             <main id='memberArea'>
@@ -80,7 +84,7 @@ export default function Member() {
                 </section>
 
                 {/* 預約記錄區 */}
-                <section id="reserve">
+                <section id="reserve" data-aos='fade-up' data-aos-duration='800'>
                     <div className="title">
                         <h2>
                             <img src={BASE_URL + "images/title/reserveTitle.svg"} alt="" />
@@ -98,78 +102,13 @@ export default function Member() {
                 </section>
 
                 {/* 收藏區 */}
-                <section id="like">
+                <section id="memberLike" data-aos='fade-up' data-aos-duration='800'>
                     <div className="title">
                         <h2><img src={BASE_URL + "images/title/likeTitle.svg"} alt="" /></h2>
                     </div>
                     {/* 卡片區 */}
                     <div className="card-area">
-                        <div className="classCard">
-                            <a href="#">
-                                <figure className="classPhoto">
-                                    <img className="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
-                                    <img className="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
-                                </figure>
-                                <div className="classWrapper">
-                                    <div className="classTag">
-                                        <p className="classLevel">入門</p>
-                                        <p className="classTime">3hr</p>
-                                    </div>
-                                    <div className="classTitle">
-                                        <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                        <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
-                                    </div>
-                                    <div className="classPrice">
-                                        <p className="classStoreName">草樹工作坊</p>
-                                        <p className="classPrice">$ 3800</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="classCard">
-                            <a href="#">
-                                <figure className="classPhoto">
-                                    <img className="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
-                                    <img className="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
-                                </figure>
-                                <div className="classWrapper">
-                                    <div className="classTag">
-                                        <p className="classLevel">入門</p>
-                                        <p className="classTime">3hr</p>
-                                    </div>
-                                    <div className="classTitle">
-                                        <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                        <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
-                                    </div>
-                                    <div className="classPrice">
-                                        <p className="classStoreName">草樹工作坊</p>
-                                        <p className="classPrice">$ 3800</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div className="classCard">
-                            <a href="#">
-                                <figure className="classPhoto">
-                                    <img className="classPhoto-img" src="./images/classphoto-01.jpg" alt="" />
-                                    <img className="tagHotorNew" src="./images/icon-tag/labels-hot.svg" alt="" />
-                                </figure>
-                                <div className="classWrapper">
-                                    <div className="classTag">
-                                        <p className="classLevel">入門</p>
-                                        <p className="classTime">3hr</p>
-                                    </div>
-                                    <div className="classTitle">
-                                        <h3>創造專屬你們的對戒！『草樹工作坊』銀戒雙人體驗課 </h3>
-                                        <img className="icons-heart" src="./images/icon-tag/icons-heart.svg" alt="" />
-                                    </div>
-                                    <div className="classPrice">
-                                        <p className="classStoreName">草樹工作坊</p>
-                                        <p className="classPrice">$ 3800</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+                        <ClassCardLatest />
 
                     </div>
 
@@ -183,7 +122,7 @@ export default function Member() {
                 </section>
 
                 {/* 心得區 */}
-                <section id="experience">
+                <section id="experience" data-aos='fade-up' data-aos-duration='800'>
                     <div className="expWrapper">
                         <div className="expTitle">
                             <img className='expHeader' src="./images/title/myShare.svg" alt="" />
@@ -236,12 +175,6 @@ export default function Member() {
                                 <li><a href="">最新課程</a></li>
                             </ul>
                         </li>
-                        {/* <li>
-                            <a href="">商城</a>
-                            <ul>
-                                <li><a href="">商城</a></li>
-                            </ul>
-                        </li> */}
                         <li>
                             <a href="">會員中心</a>
                             <ul>
