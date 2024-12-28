@@ -23,7 +23,7 @@ body {
 
     section {
         width: 100%;
-        border: 1px dashed tomato;
+        // border: 1px dashed tomato;
         display: flex;
         flex-direction: column;
         padding: 5% 15%;
@@ -181,6 +181,18 @@ body {
                     display: flex;
                     align-items: center;
                     margin-bottom: 40px;
+
+                    input {
+                        font-size: 1rem;
+                        padding: 10px;
+                        border-radius: 6px;
+                        border: none;
+
+                        &:focus {
+                            outline: 2px solid #483D3F;
+                            background-color: #feebba;
+                        }
+                    }
                 }
             }
 
@@ -240,9 +252,10 @@ body {
                 padding: 14px 24px;
                 border-radius: 99px;
                 cursor: pointer;
+                transition: all 0.4s ease-in-out;
 
                 &:hover {
-                    background-color: #B07662;
+                    background-color: #78686B;
                 }
             }
 
@@ -263,8 +276,8 @@ body {
                     cursor: pointer;
 
                     &:hover {
-                        border: 2px solid #B07662;
-                        color: #B07662;
+                        border: 2px solid #78686B;
+                        color: #78686B;
                     }
                 }
             }
@@ -342,8 +355,8 @@ body {
 
 
                 .memberBtn.change-password {
-                    opacity: 0.6;
-                    background-color: #B07662;
+                    opacity: 0.8;
+                    background-color: #78686B;
                     cursor: default;
                 }
 
@@ -546,10 +559,12 @@ body {
                     border-radius: 99px;
                     padding: 14px 24px;
                     cursor: pointer;
+                    transition: all 0.4s ease-in-out;
 
                     &:hover {
                         background-color: $color-brown-dark;
                         color: #fff;
+                        
                     }
                 }
             }
@@ -628,6 +643,7 @@ body {
 
 /* 收藏區 */
 #memberArea>#memberLike {
+    min-width: 1100px;
 
     .card-area {
         display: flex;
@@ -857,25 +873,25 @@ body {
 }
 
 /* 收藏-平板 */
-// @media ($mediaMd) {
-//     #memberArea>#memberLike {
-//         padding: 5% 8%;
+@media ($mediaMd) {
+    #memberArea>#memberLike {
+        min-width: 100%;
+        padding: 5% 8%;
 
-//         .card-area .classCard:last-child {
-//             display: none;
-//         }
-//     }
-// }
+        .card-area .classCard:last-child {
+            display: none;
+        }
+    }
+}
 
 // /* 收藏-手機 */
-// @media ($mediaSm) {
-//     #memberLike {
-//         .card-area {
-//             flex-direction: column;
-//             gap: 24px;
-//         }
-//     }
-// }
+@media ($mediaSm) {
+    #memberLike {
+        .card-area {
+            flex-direction: column;
+        }
+    }
+}
 
 
 /* 心得區 */

@@ -8,6 +8,7 @@ import SeeMore from '../component/SeeMore';
 import MyShareBox from '../component/MyShareBox';
 import ToTop from '../component/ToTop';
 import ClassCardLatest from '../component/ClassCardLatest';
+import { useState } from 'react';
 
 export default function Member() {
     const BASE_URL = import.meta.env.BASE_URL;
@@ -19,7 +20,24 @@ export default function Member() {
         right: "10px",
     };
 
-   
+    //編輯暱稱
+    const [name, setName] = useState("阿明"); // 初始文字
+    const [isEditing, setIsEditing] = useState(false);
+
+    // 開始編輯
+    const handleEditClick = () => {
+        setIsEditing(true);
+    };
+
+    // 保存修改
+    const handleSave = (e) => {
+        setName(e.target.value); // 更新文字
+    };
+
+    // 停止編輯
+    const handleBlur = () => {
+        setIsEditing(false);
+    };
 
     return (
         <>
@@ -55,8 +73,19 @@ export default function Member() {
                                 </div>
 
                                 <div className="name-default">
-                                    <p>阿明</p>
-                                    <img className="icon-edit" src={BASE_URL + "images/icon-tag/type=edit.svg"} alt="" />
+                                    {isEditing ? (
+                                        <input
+                                            type="text"
+                                            maxlength="5"
+                                            value={name}
+                                            onChange={handleSave}
+                                            onBlur={handleBlur} // 當輸入框失去焦點時結束編輯
+                                            autoFocus
+                                        />
+                                    ) : (
+                                        <p>{name}</p>
+                                    )}
+                                    <img className="icon-edit" src={BASE_URL + "images/icon-tag/type=edit.svg"} alt="編輯" onClick={handleEditClick}  />
                                 </div>
                             </div>
 
