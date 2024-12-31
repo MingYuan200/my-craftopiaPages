@@ -7,10 +7,6 @@ import Blob3 from "../assets/blob3.svg";
 import Blob4 from "../assets/qaDeco.svg";
 import Blob5 from "../assets/blob5.svg";
 
-
-
-
-
 export default function Qa() {
 
     const qaData = {
