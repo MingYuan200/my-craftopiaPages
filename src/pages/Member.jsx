@@ -12,7 +12,7 @@ import { useState } from 'react';
 import { auth } from '../config/firebase';
 
 export default function Member() {
-    const BASE_URL = import.meta.env.BASE_URL;
+    // const BASE_URL = import.meta.env.BASE_URL;
 
     //至頂按鈕樣式
     const initialStyle = {
@@ -50,9 +50,9 @@ export default function Member() {
 
                 {/* 泡泡區 */}
                 <div className="bg-blob">
-                    <img className='infoBlob1' src={BASE_URL + "images/blob-3.svg"} alt="" />
-                    <img className='infoBlob2' src={BASE_URL + "images/blob-4.svg"} alt="" />
-                    <img className='infoBlob3' src={BASE_URL + "images/blob-5.svg"} alt="" />
+                    <img className='infoBlob1' src="./images/blob-3.svg" alt="" />
+                    <img className='infoBlob2' src="./images/blob-4.svg" alt="" />
+                    <img className='infoBlob3' src="./images/blob-5.svg" alt="" />
 
 
                     <Blob5 className='infoBlob1 left-red' />
@@ -69,10 +69,10 @@ export default function Member() {
                             <div className="avatarBox">
                                 <div className="avatar">
                                     <div className="ava-photo">
-                                        <img src={BASE_URL + "images/avatar/24-02.jpg"} alt="" />
+                                        <img src="./images/avatar/24-02.jpg" alt="" />
                                     </div>
                                     <div className="camera">
-                                        <img src={BASE_URL + "images/icon-tag/type=camera.svg"} alt="" />
+                                        <img src="./images/icon-tag/type=camera.svg" alt="" />
                                     </div>
                                 </div>
 
@@ -89,7 +89,7 @@ export default function Member() {
                                     ) : (
                                         <p>{name}</p>
                                     )}
-                                    <img className="icon-edit" src={BASE_URL + "images/icon-tag/type=edit.svg"} alt="編輯" onClick={handleEditClick} />
+                                    <img className="icon-edit" src="./images/icon-tag/type=edit.svg" alt="編輯" onClick={handleEditClick} />
                                 </div>
                             </div>
 
@@ -120,7 +120,7 @@ export default function Member() {
                 <section id="reserve" data-aos='fade-up' data-aos-duration='800'>
                     <div className="title">
                         <h2>
-                            <img src={BASE_URL + "images/title/reserveTitle.svg"} alt="" />
+                            <img src="./images/title/reserveTitle.svg" alt="" />
                         </h2>
                     </div>
                     {/* 列表區 */}
@@ -137,7 +137,7 @@ export default function Member() {
                 {/* 收藏區 */}
                 <section id="memberLike" data-aos='fade-up' data-aos-duration='800'>
                     <div className="title">
-                        <h2><img src={BASE_URL + "images/title/likeTitle.svg"} alt="" /></h2>
+                        <h2><img src="./images/title/likeTitle.svg" alt="" /></h2>
                     </div>
                     {/* 卡片區 */}
                     <div className="card-area">
