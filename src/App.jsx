@@ -7,6 +7,7 @@ import Member from './pages/Member';
 import Qa from './pages/Qa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Login from './pages/Login';
 
 
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path='/member' element={<Member />}></Route>
         <Route path='/qa' element={<Qa />}></Route>
+        <Route path='/login' element={<Login />}></Route>
       </Routes>
 
 

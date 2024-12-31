@@ -9,6 +9,7 @@ import MyShareBox from '../component/MyShareBox';
 import ToTop from '../component/ToTop';
 import ClassCardLatest from '../component/ClassCardLatest';
 import { useState } from 'react';
+import { auth } from '../config/firebase';
 
 export default function Member() {
     const BASE_URL = import.meta.env.BASE_URL;
@@ -39,10 +40,13 @@ export default function Member() {
         setIsEditing(false);
     };
 
+    console.log(auth)
+
     return (
         <>
             <main id='memberArea'>
 
+                <p>{auth.currentUser.displayName}</p>
 
                 {/* 泡泡區 */}
                 <div className="bg-blob">
@@ -85,7 +89,7 @@ export default function Member() {
                                     ) : (
                                         <p>{name}</p>
                                     )}
-                                    <img className="icon-edit" src={BASE_URL + "images/icon-tag/type=edit.svg"} alt="編輯" onClick={handleEditClick}  />
+                                    <img className="icon-edit" src={BASE_URL + "images/icon-tag/type=edit.svg"} alt="編輯" onClick={handleEditClick} />
                                 </div>
                             </div>
 
