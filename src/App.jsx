@@ -7,6 +7,7 @@ import Member from './pages/Member';
 import Qa from './pages/Qa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Home from './pages/Home';
 
 
 
@@ -21,6 +22,7 @@ function App() {
     <div>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path='/member' element={<Member />}></Route>
         <Route path='/qa' element={<Qa />}></Route>
       </Routes>

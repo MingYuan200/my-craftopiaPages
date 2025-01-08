@@ -6,6 +6,9 @@ export default function Navbar() {
         <div>
             <ul>
                 <li>
+                    <Link to='/'>首頁</Link>
+                </li>
+                <li>
                     <Link to='/member'>會員中心</Link>
                 </li>
                 <li>
